@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.DynamicIdPage;
 import pages.HomePage;
 import pages.ClassAttributePage;
+import pages.ScrollbarsPage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -27,6 +28,15 @@ public class GeneralTests extends BaseTests {
         ClassAttributePage.clickButton();
         assertEquals(ClassAttributePage.getAlertText(), "Primary button pressed");
         ClassAttributePage.acceptAlert();
+    }
+
+    @Test
+    public void findHiddenButtonAndClickIt() {
+        HomePage homePage = new HomePage(driver);
+        ScrollbarsPage scrollbarsPage = new ScrollbarsPage(driver);
+        homePage.clickScrollbarsLink();
+        scrollbarsPage.clickHidingButton();
+
 
 
     }

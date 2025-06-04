@@ -4,6 +4,8 @@ import base.BaseTests;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.DynamicIdPage;
+import pages.ScrollbarsPage;
+
 import static org.testng.Assert.*;
 
 public class HomePageTests extends BaseTests {
@@ -21,6 +23,16 @@ public class HomePageTests extends BaseTests {
         homePage.clickDynamicIdLink();
 
         assertEquals( dynamicIdPage.getTitle(), "Dynamic ID");
+
+    }
+
+    @Test
+    public void clickScrollbarsLink_SuccessRedirect() {
+        HomePage homePage = new HomePage(driver);
+        ScrollbarsPage scrollbarsPage = new ScrollbarsPage(driver);
+        homePage.clickScrollbarsLink();
+
+        assertEquals(scrollbarsPage.getTitle(), "Scrollbars");
 
     }
 }

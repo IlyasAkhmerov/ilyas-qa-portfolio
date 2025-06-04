@@ -40,6 +40,11 @@ public class BaseTests {
                 e.printStackTrace();
             }
         }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.quit();
     }
 }

@@ -12,6 +12,7 @@ public class HomePage {
     private By searchField = By.id("title");
     private By dynamicId = By.cssSelector("#overview div:nth-child(1) .row:nth-child(1) .col-sm:nth-child(1) h3 a");
     private By classAttibute = By.cssSelector("#overview div:nth-child(1) .row:nth-child(1) .col-sm:nth-child(2) h3 a");
+    private By scrollbars = By.cssSelector("#overview .container div.row:nth-child(3) .col-sm:nth-child(1) a");
 
     public HomePage(WebDriver driver){
         this.driver = driver;
@@ -33,6 +34,12 @@ public class HomePage {
     public void clickClassAttributeLink() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement button = wait.until(ExpectedConditions.presenceOfElementLocated(classAttibute));
+        button.click();
+    }
+
+    public void clickScrollbarsLink() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement button = wait.until(ExpectedConditions.presenceOfElementLocated(scrollbars));
         button.click();
     }
 
