@@ -1,0 +1,14 @@
+{
+  "name": "functional-tests",
+  "version": "1.0.0",
+  "description": "UI Driven End-to-End Tests",
+  "main": "index.js",
+  "devDependencies": {
+    "cypress": "^14.4.1"
+  },
+  "scripts": {
+    "test": "cypress run"
+ },
+  "author": "Ilyas Akhmerov",
+  "license": "ISC"
+}
